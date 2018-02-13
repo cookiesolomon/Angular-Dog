@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+
+<div class="main grow" style="text-align:center">
+  <h1 id='warped'>
+      <span class='w0'>D</span><span class='w1'>a</span><span class='w2'>p</span><span class='w3'>p</span><span class='w4'>e</span><span class='w5'>r</span><span class='w6'> </span><span class='w7'>D</span><span class='w8'>o</span><span class='w9'>g</span><span class='w10'>g</span><span class='w11'>i</span><span class='w12'>e</span><span class='w13'>s</span>
+    <!-- {{ title }} -->
+  </h1>
+  <!-- <div id="heart" class="grow"></div> -->
+</div>
+
+
+
+<app-dog-editor></app-dog-editor>
+<app-dogs></app-dogs>
+
+<ul>
+  <li *ngFor="let cat of cats; let i =index">{{i + 1}} {{cat.name | uppercase}} - {{cat.weight}}kgs - Born on {{cat.birthDate || birthDate | date: cat.dateType }}
+    <button style="border-radius: 50%; border: none; outline: none;"(click)="toggleCat(cat)">{{ (cat.dateType === "fullDate" ? '-' : '+')}}</button>
+  </li>
+</ul>

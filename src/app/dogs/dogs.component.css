@@ -1,0 +1,15 @@
+.display-dogs {
+  text-align: center;
+  background-color: #dad9d8;
+  min-width: 300px;
+  max-width: 50%;
+  margin: auto;
+  border-radius: 10px;
+
+}
+.display-dogs ul {
+  list-style-type: none;
+  font-family: 'Questrial', sans-serif;
+  padding-top: 4px;
+}
+
