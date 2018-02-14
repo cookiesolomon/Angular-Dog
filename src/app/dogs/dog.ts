@@ -3,4 +3,5 @@ export class Dog {
   name: string;
   weight: number;
   birthDate: Date;
+  dateType: string;
 }

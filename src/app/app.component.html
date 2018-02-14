@@ -10,9 +10,10 @@
 </div>
 
 
-
 <app-dog-editor></app-dog-editor>
+
 <app-dogs></app-dogs>
+
 
 <ul>
   <li *ngFor="let cat of cats; let i =index">{{i + 1}} {{cat.name | uppercase}} - {{cat.weight}}kgs - Born on {{cat.birthDate || birthDate | date: cat.dateType }}

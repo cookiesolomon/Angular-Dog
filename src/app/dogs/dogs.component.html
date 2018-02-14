@@ -1,8 +1,8 @@
 <div class="display-dogs">
 <ul>
-    <li *ngFor="let dog of dogs; let i =index">{{i + 1}} {{dog.name | uppercase}} - {{dog.weight}}kgs - Born on {{dog.birthDate || birthDate | date: dog.dateType }}
-      <button style="border-radius: 50%; border: none; outline: none;"(click)="toggleDate(dog)">{{ (dog.dateType === "fullDate" ? '-' : '+')}}</button>
-      <button (click)="deleteDog(i)">delete</button>
+    <li *ngFor="let dog of dogs; let i =index">{{i + 1}}.  {{dog.name | uppercase}} - {{dog.weight}}kgs - Born on {{dog.birthDate || birthDate | date: dog.dateType }}
+      <button style="border-radius: 50%; outline: none; background-color: lightblue;"(click)="toggleDate(dog)">{{ (dog.dateType === "fullDate" ? '-' : '+')}}</button>
+      <button style="border-radius: 5px; outline: none;background-color: rgb(137, 168, 179);" (click)="deleteDog(i)">delete</button>
     </li>
 </ul>
 </div>

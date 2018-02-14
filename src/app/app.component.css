@@ -5,13 +5,14 @@
 }
 
 .main {
-    border: blue;
+
     background-image: url('MultiDoge-e1434554708695.png');
     background-size: cover;
     border-radius: 50%;
     height:400px;
     width:400px;
     margin:auto;
+    text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
 
 
 }
@@ -19,8 +20,9 @@
     font-size: 40px;
     padding-top: 125px;
     color: antiquewhite;
-    padding-left: 20px;
-    padding-right: 20px;
+    text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+
+
 
 
 }
