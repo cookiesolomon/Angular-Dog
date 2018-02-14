@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Dog } from '../dogs/dog';
 import { DogService } from '../dog.service';
+
 
 @Component({
   selector: 'app-dog-editor',
@@ -8,22 +9,27 @@ import { DogService } from '../dog.service';
   styleUrls: ['./dog-editor.component.css']
 })
 export class DogEditorComponent implements OnInit {
-  dogName: string;
-  dogWeight: number;
-  dateType: string;
-  birthDate: Date;
+@Input() dog: Dog = new Dog();
+@Output() dogAdded: EventEmitter<Dog> = new EventEmitter();
+@Output() dogEdited: EventEmitter<Dog> = new EventEmitter();
   constructor(private dogService: DogService) { }
 
   ngOnInit() {
   }
 
   addDog() {
-  let newDog = new Dog();
-  newDog.name = this.dogName;
-  newDog.weight = this.dogWeight;
-  newDog.birthDate = this.birthDate;
-  this.dogService.addDog(newDog);
-  }
+  this.dogService.addDog(this.dog);
+  this.dogAdded.emit(this.dog);
 
+  // make add button stay add after cicking
+  this.dog = new Dog();
+
+  }
+  editDog(id, dog) {
+  this.dogService.editDog(this.dog.id, this.dog);
+  this.dogEdited.emit(this.dog);
+  this.dog.wasEdited = true;
+  this.dog = new Dog();
+}
 
 }

@@ -1,21 +1,29 @@
 <div class="container-fluid">
   <div class="row">
-      <div class="col-md-8">
-<div class="inputs">
-    <h3>Add a New Dog:</h3>
-    <label>Name:
-      <input type="text" [(ngModel)]="dogName" placeholder="Enter name">
-    </label>
-    <br>
-    <label>Weight:
-      <input type="text" [(ngModel)]="dogWeight" placeholder="Enter weight">
-    </label>
-    <span *ngIf="dogWeight < 10" [ngClass]="{'warning' : dogWeight < 5, 'message': true}">{{dogName}} is underweight!</span><br>
-    <label>D/O/B:
-    <input type="date" [(ngModel)]="birthDate" placeholder="Enter birthdate">
-    </label>
-    <br><button class="add-dog" type="button" (click)="addDog()">Add Dog</button>
+    <div class="col-md-8">
+      <div class="inputs">
+        <h3>Add a New Dog:</h3>
+        <label>Name:
+          <input type="text" [(ngModel)]="dog.name" placeholder="Enter name" required>
+        </label>
+        <br>
+        <label>Weight:
+          <input type="text" [(ngModel)]="dog.weight" placeholder="Enter weight" required>
+        </label>
+        <span *ngIf="dog.weight < 10" [ngClass]="{'warning' : dog.weight < 5, 'message': true}">{{dog.name}} is underweight!</span>
+        <br>
+        <label>D/O/B:
+          <input type="date" [(ngModel)]="dog.birthDate" placeholder="Enter birthdate">
+        </label>
+        <br>
+        <button *ngIf="!dog.id" class="add-dog" (click)='addDog()'>
+          <span>Add Dog</span>
+        </button>
+
+        <button *ngIf="dog.id" class="add-dog" (click)='editDog()'>
+          <span>Edit Dog</span>
+        </button>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>

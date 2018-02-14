@@ -10,13 +10,13 @@
 </div>
 
 
-<app-dog-editor></app-dog-editor>
-
 <app-dogs></app-dogs>
 
-
+<div class='cats'>
+  <h3>Cats</h3>
 <ul>
   <li *ngFor="let cat of cats; let i =index">{{i + 1}} {{cat.name | uppercase}} - {{cat.weight}}kgs - Born on {{cat.birthDate || birthDate | date: cat.dateType }}
     <button style="border-radius: 50%; border: none; outline: none;"(click)="toggleCat(cat)">{{ (cat.dateType === "fullDate" ? '-' : '+')}}</button>
   </li>
 </ul>
+</div>

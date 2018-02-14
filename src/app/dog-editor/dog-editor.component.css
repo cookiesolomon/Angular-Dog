@@ -10,7 +10,7 @@ h3 {
   font-weight: bold;
   text-align: center;
   background-color: #dad9d8;
-  min-width: 300px;
+  min-width: 600px;
   max-width: 50%;
   margin: auto;
   border-radius: 10px;
@@ -33,7 +33,7 @@ input {
 
 }
 .add-dog{
-
+outline: none;
 margin-top: 5px;
 margin-bottom: 5px;
     -webkit-border-radius: 10px;
@@ -51,7 +51,7 @@ margin-bottom: 5px;
 }
 
 .add-dog span {
-    background-color: #E8E8E8;
+    background-color: rgb(121, 113, 113);
 
     background-image:
         /* gloss gradient */
@@ -111,14 +111,14 @@ margin-bottom: 5px;
     text-transform: uppercase;
     font-family: 'TradeGothicLTStd-BdCn20','PT Sans Narrow';
     font-weight: 700;
-    font-size: 32px;
+    font-size: 20px;
 
     text-shadow: 0px 1px #fff, 0px -1px #262F33;
 }
 
         .add-dog span:hover {
-            color: #AEBF3B;
-            text-shadow: 0px -1px #97A63A;
+            color: rgb(110, 102, 131);
+            text-shadow: 0px -1px rgb(120, 122, 106);
             cursor: pointer;
         }
 
@@ -151,5 +151,5 @@ margin-bottom: 5px;
         font-weight: 700;
         color: #AEBF3B;
         text-shadow: 0px 1px #fff, 0px -1px #97A63A;
-        font-size: 26px;
+        font-size: 20px;
     }

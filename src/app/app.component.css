@@ -27,6 +27,39 @@
 
 }
 
+h3 {
+  font-family: 'Lato', sans-serif;
+  color: rgb(11, 11, 92);
+  font-weight: bold;
+}
+.cats{
+    text-align: center;
+    background-color: #dad9d8;
+    text-align: center;
+    min-width: 600px;
+    max-width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    line-height: 6px;
+    margin-top: 10px;
+    overflow-x:auto
+
+  }
+  .cats ul {
+    list-style-type: none;
+    font-family: 'Questrial', sans-serif;
+    padding-top: 4px;
+    color: rgb(11, 11, 92);
+    font-weight: bold;
+
+  }
+
+  .cats li{
+    padding-bottom: 10px;
+
+  }
 
 
 .grow { transition: all .2s ease-in-out; }

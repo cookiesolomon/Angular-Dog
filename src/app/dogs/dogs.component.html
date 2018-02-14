@@ -1,8 +1,15 @@
+<app-dog-editor (dogAdded)="addLastUpdated($event)"  (dogEdited)="addEditedDogs($event)" [dog]='selectedDog'></app-dog-editor>
+
 <div class="display-dogs">
+    <h3>Dogs</h3>
 <ul>
-    <li *ngFor="let dog of dogs; let i =index">{{i + 1}}.  {{dog.name | uppercase}} - {{dog.weight}}kgs - Born on {{dog.birthDate || birthDate | date: dog.dateType }}
+    <li *ngFor="let dog of dogs; let i =index"><span>{{i + 1}}.  {{dog.name | uppercase}} - {{dog.weight}}kgs - Born on {{dog.birthDate || birthDate | date: dog.dateType }}
       <button style="border-radius: 50%; outline: none; background-color: lightblue;"(click)="toggleDate(dog)">{{ (dog.dateType === "fullDate" ? '-' : '+')}}</button>
       <button style="border-radius: 5px; outline: none;background-color: rgb(137, 168, 179);" (click)="deleteDog(i)">delete</button>
+      <button style="border-radius: 5px; outline: none;background-color: rgb(137, 168, 179);" (click)="editDog(dog)">edit</button>
+    </span>
+    <span class="updated" *ngIf="dog.wasEdited">recently updated</span>
     </li>
 </ul>
+<h4 *ngIf="lastUpdated.length > 0">{{lastUpdated}}</h4>
 </div>
